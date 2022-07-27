@@ -1,0 +1,29 @@
+#This method sorts an Integer array in ascending order based on the bubble sort algorithm.
+
+def bubble_sort(numbers)
+    did_swap = true #condition to determine if any swaps were made
+
+    while did_swap
+        swap_count = 0
+
+        for i in (0...numbers.length-1) do
+            if numbers[i] > numbers[i+1]
+                temp = numbers[i]
+                numbers[i] = numbers[i+1]
+                numbers[i+1] = temp
+                swap_count += 1 #determine if swap was made
+            end
+        end
+
+        if swap_count == 0
+            did_swap = false
+        end
+    end
+    numbers
+end
+
+p bubble_sort [4, 1, 4, 6, 0, 3, -9, 78]
+
+
+
+    
